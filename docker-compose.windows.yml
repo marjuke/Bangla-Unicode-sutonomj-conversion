@@ -1,0 +1,18 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.windows
+    container_name: unicode-bijoy-api
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+    restart: unless-stopped
+    isolation: hyperv
+    healthcheck:
+      test: ["CMD", "powershell", "-Command", "try { $$response = Invoke-WebRequest -Uri http://localhost:8000/health -UseBasicParsing; if ($$response.StatusCode -eq 200) { exit 0 } else { exit 1 } } catch { exit 1 }"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
