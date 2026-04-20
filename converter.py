@@ -381,7 +381,7 @@ class Unicode:
 				temp += util.subString(str, i + 2, util.mb_strlen(str))
 				str = temp
 
-			#  Change pre-kar to post format suitable for unicode
+			#  Change pre-kar to post format suitable for Unicode
 			if (i < util.mb_strlen(str) - 1 and self.IsBanglaPreKar(util.mbCharAt(str, i)) and self.IsSpace(
                     util.mbCharAt(str, i + 1)) == False):
 
