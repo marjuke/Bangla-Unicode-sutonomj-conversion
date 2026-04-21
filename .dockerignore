@@ -11,9 +11,7 @@ build/
 venv/
 env/
 
-# IIS specific
-web.config
-*.ps1
+
 
 # IDE
 .vscode/
