@@ -1,4 +1,4 @@
-import util
+from app.core import util
 
 preConversionMap = {
 		'\u00af\u00cd':'\u00afZ', # Fix "¯Í" -> "¯Z" to map "স্ত" instead of "স্ত্ম"

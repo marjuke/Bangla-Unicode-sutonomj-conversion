@@ -1,0 +1,7 @@
+services:
+  a2u-converter:
+    build: .
+    container_name: a2u-converter
+    ports:
+      - "8000:8000"
+    restart: unless-stopped

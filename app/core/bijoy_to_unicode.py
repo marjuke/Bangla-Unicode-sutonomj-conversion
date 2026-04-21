@@ -1,5 +1,5 @@
-import converter
-import util
+from app.core import converter
+from app.core import util
 
 
 class BijoyToUnicode:

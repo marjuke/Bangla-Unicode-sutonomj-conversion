@@ -56,6 +56,12 @@ This project provides a simple HTTP API to convert:
    git clone https://github.com/yourusername/unicode-bijoy-converter.git
    cd unicode-bijoy-converter
    ```
+   
+2 **Create virtual environment (recommended):**
+   ```bash
+     python -m venv venv
+     venv\Scripts\activate  # On Linux/Mac: source venv/bin/activate
+   ```
 
 2. **Install dependencies:**
    ```bash
@@ -64,7 +70,7 @@ This project provides a simple HTTP API to convert:
 
 3. **Run the server:**
    ```bash
-   uvicorn api:app --host 0.0.0.0 --port 8000 --reload
+   uvicorn app.api:app --reload
    ```
 
 4. **Access the API:**
@@ -100,7 +106,7 @@ docker-compose -f docker-compose.windows.yml up -d
 
 ## IIS Deployment
 
-For deploying on Windows IIS, see the detailed guide in [deploy/IIS-DEPLOYMENT.md](deploy/IIS-DEPLOYMENT.md).
+For deploying on Windows IIS, see the detailed guide in [deploy/IIS-DEPLOYMENT.md](docs/IIS-DEPLOYMENT.md).
 
 ```powershell
 # Quick setup

@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 
-import converter
-from bijoy_to_unicode import BijoyToUnicode
+from app.core import converter
+from app.core.bijoy_to_unicode import BijoyToUnicode
 
 
 class TextRequest(BaseModel):
@@ -32,3 +32,6 @@ def unicode_to_bijoy(payload: TextRequest):
 def bijoy_to_unicode(payload: TextRequest):
     result = BijoyToUnicode().convertBijoyToUnicode(payload.text)
     return TextResponse(text=result)
+
+
+
